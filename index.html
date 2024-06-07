@@ -53,6 +53,10 @@
             padding: 0;
         }
 
+        #home {
+            height: 100svh;
+        }
+
         .row {
             display: flex;
             align-content: space-evenly;
@@ -62,50 +66,70 @@
             display: block;
             width: 50%;
             font-size: 14px;
-            margin: 5px;
-            padding: 12px 20px;
-            outline: 1px solid red;
-            border-radius: 4px;
+            margin: 2px;
+            padding: 5px 5px;
+            outline: 2px solid white;
+            border-radius: 5px;
+            border: 3px solid #CCCCCD;
             background-color: var(--tg-theme-button-color, #50a8eb);
             color: var(--tg-theme-button-text-color, #ffffff);
             cursor: pointer;
         }
 
         button.tile img {
-            max-width: 250px;
-            max-height:230px;
+            max-width: 200px;
+            max-height: 180px;
             margin: 5px auto;
         }
 
         button.tile p {
             text-align: center;
-            font-family: iranSans,yekan;
-            font-size:18px;
+            font-family: iranSans, yekan;
+            font-size: 18px;
+        }
+
+        a,
+        a:link,
+        a:visited {
+            color: var(--tg-theme-button-text-color, #ffffff);
+            text-decoration: none;
         }
     </style>
 </head>
 
 <body style="visibility: hidden;">
-    <div class="row">
-        <button class="tile">
-            <img src="images/Guide.png" alt="راهنما" width="100%" id="btnHelp" />
-            <p>راهنما</p>
-        </button>
-        <button class="tile">
-            <img src="images/irimc-logo-250.png" alt="سایت" width="100%" />
-            <p>سایت</p>
-        </button>
-    </div>
-    <div class="row">
-        <button class="tile">
-            <img src="images/GoodStanding.png" alt="گوداستندینگ" width="100%" />
-            <p>گوداستندینگ</p>
-        </button>
-        <button class="tile">
-            <img src="images/Certificate.png" alt="پروانه مطب" width="100%" />
-            <p>پروانه مطب</p>
-        </button>
-    </div>
+    <section id="home">
+
+        <div class="row">
+            <button class="tile">
+                <a href="https://desktop.irimc.org/Content/GuideDoc/Rules01.pdf" target="_blank">
+                    <img src="images/Guide.png" alt="راهنما" width="100%" id="btnHelp" />
+                    <p>راهنما
+                    </p>
+                </a>
+            </button>
+            <button class="tile">
+                <a href="https://irimc.org/" target="_blank">
+                    <img src="images/irimc-logo-250.png" alt="سایت" width="100%" />
+                    <p>سایت</p>
+                </a>
+            </button>
+        </div>
+        <div class="row">
+            <button class="tile">
+                <a href="https://desktop.irimc.org/" target="_blank">
+                    <img src="images/GoodStanding.png" alt="گوداستندینگ" width="100%" />
+                    <p>گوداستندینگ</p>
+                </a>
+            </button>
+            <button class="tile">
+                <a href="https://parvaneh.irimc.org/" target="_blank">
+                    <img src="images/Certificate.png" alt="پروانه مطب" width="100%" />
+                    <p>پروانه مطب</p>
+                </a>
+            </button>
+        </div>
+    </section>
     <section id="log"></section>
     <script type="application/javascript">
 
